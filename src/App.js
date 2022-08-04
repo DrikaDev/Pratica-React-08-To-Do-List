@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const GlobalStyle = createGlobalStyle`
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Dancing Script', cursive;
 }
+`
+const CaixaPrincipal = styled.div`
+  background: linear-gradient(to top, #40e0d0, #ff8c00, #ff0080);
+  border: 10px solid black;
+  border-radius: 20px;
+  width: 100%;
+  height: 100vh;
+`
 
-export default App;
+export default class App extends Component{
+  render(){
+    return(
+      <CaixaPrincipal>
+        <GlobalStyle/>
+        <Header/>
+        <Footer/>
+      </CaixaPrincipal>
+    )
+  }
+}
