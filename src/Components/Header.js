@@ -75,12 +75,14 @@ export const CaixaDoMeio = styled.div`
   }
 
   span{
+    opacity: 0;
     cursor: pointer;
     font-size: 1.5rem;
+    color: green;
   }
 
   span:hover{
-    color: green;
+    opacity: 1;
   }
 `
 
